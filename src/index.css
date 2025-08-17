@@ -81,6 +81,9 @@ button.addUsers {
     border: none;
     outline: none;
     border-radius: 0.6em;
+    svg {
+        fill: white;
+    }
 }
 button.addUsers:hover {
     background-color: var(--bgColor2);
@@ -88,8 +91,11 @@ button.addUsers:hover {
 }
 .filter {
     text-align: center;
-    width: 8%;
+    width: 10%;
     color: var(--fontColor2);
+    svg {
+        fill: var(--fontColor2);
+    }
 }
 input[type="search" ] {
     display: inline-block;
