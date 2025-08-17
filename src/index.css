@@ -1,0 +1,367 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --fontColor1: rgb(32, 32, 32);
+    --fontColor2: rgba(55, 55, 55, 0.933);
+    --white1: rgb(244, 242, 242);
+    --bgColor1: rgb(33, 93, 222);
+    --bgColor2: rgba(2, 103, 181, 0.741);
+    --bgColor3: rgb(5, 99, 157);
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontColor1);
+}
+
+
+#mainContent {
+    width: 75%;
+    height: 50em;
+    margin-left: auto;
+}
+#users {
+    width: 100%;
+    height: 80%;
+}
+.horizontalData {
+    h4 {
+        color: var(--fontColor1);
+    }
+    p {
+        font-size: 0.9em;
+        color: var(--fontColor2);
+    }
+}
+#users {
+    width: 90%;
+    margin: 0em auto;
+}
+.name, .username {
+    width: 12%;
+}
+.email,
+.phone {
+    width: 20%;
+}
+.city,
+.password {
+    width: 15%;
+}
+.logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.horizontalData {
+    border-radius: 1em;
+}
+.horizontalData:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button.addUsers {
+    padding: 0.3em 0.5em;
+    font-size: 0.7em;
+    color: white;
+    background-color: var(--bgColor1);
+    border: none;
+    outline: none;
+    border-radius: 0.6em;
+}
+button.addUsers:hover {
+    background-color: var(--bgColor2);
+    cursor: pointer;
+}
+.filter {
+    text-align: center;
+    width: 8%;
+    color: var(--fontColor2);
+}
+input[type="search" ] {
+    display: inline-block;
+    width: 40%;
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 1em;
+    padding: 0em 1em;
+}
+.container {
+    width: 100%;
+    height: max-content;
+}
+.flex-row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-row-nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-col-wrap {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.flex-column-nowrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.align-end {
+    align-items: end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-start {
+    align-self: start;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-start {
+    justify-content: start;
+}
+.justify-end {
+    justify-content: end;
+}
+.w-10 {
+    width: 10%;
+}
+.w-15 {
+    width: 15%;
+}
+.w-20 {
+    width: 20%;
+}
+.w-25 {
+    width: 25%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: 1em;
+}
+
+.p-2 {
+    padding: 2em;
+}
+
+.p-3 {
+    padding: 3em;
+}
+
+.p-0-1 {
+    padding: 0em 1em;
+}
+
+.p-0-2 {
+    padding: 0em 2em;
+}
+
+.p-0-3 {
+    padding: 0em 3em;
+}
+
+.p-1-0 {
+    padding: 1em 0em;
+}
+
+.p-2-0 {
+    padding: 2em 0em;
+}
+
+.p-3-0 {
+    padding: 3em 0em;
+}
+.text-left {
+    text-align: left !important;
+}
+.m-0 {
+    margin: 0em;
+}
+
+.m-1 {
+    margin: 1em;
+}
+
+.m-2 {
+    margin: 2em;
+}
+
+.m-3 {
+    margin: 3em;
+}
+
+.m-0-1 {
+    margin: 0em 1em;
+}
+
+.m-0-2 {
+    margin: 0em 2em;
+}
+
+.m-0-3 {
+    margin: 0em 3em;
+}
+
+.m-1-0 {
+    margin: 1em 0em;
+}
+
+.m-2-0 {
+    margin: 2em 0em;
+}
+
+.m-3-0 {
+    margin: 3em 0em;
+}
+
+.color-w {
+    color: white;
+}
+
+.deco-none {
+    text-decoration: none;
+}
+
+.p-abs {
+    position: absolute;
+}
+
+.p-rel {
+    position: relative;
+}
+
+.p-fixed {
+    position: fixed;
+}
+
+.gap-1 {
+    gap: 1em;
+}
+
+.gap-2 {
+    gap: 2em;
+}
+
+.gap-3 {
+    gap: 3em;
+}
+
+.l-style-none {
+    list-style: none;
+}
+
+.border-1 {
+    border: 1px solid black;
+}
+
+.border-2 {
+    border: 2px solid black;
+}
+
+.border-3 {
+    border: 3px solid black;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.mainHeading {
+    font-size: 3em;
+    color: var(--fontColor1);
+    background-color: var(--bgColor2);
+    padding: 0.5em;
+    margin: 0%;
+    width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.left-0 {
+    left: 0px !important;
+}
+
+.elipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu,
+.close:hover {
+    fill: rgb(107, 106, 106);
+    cursor: pointer;
+}
+
+.iconLink {
+    svg {
+        fill: var(--fontColor2);
+    }
+}
+
+.active p {
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgb(164, 163, 163);
+}
+

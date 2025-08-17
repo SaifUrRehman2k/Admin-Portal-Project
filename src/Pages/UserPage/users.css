@@ -1,0 +1,29 @@
+.user-details-container {
+  margin-left: auto;
+  width: 75%;
+  margin-left: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-details-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.detail-item {
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgb(188, 187, 187);
+}
+
+.detail-item strong {
+  display: inline-block;
+  width: 150px;
+  color: #333;
+}
+
+.detail-value {
+  color: #555;
+}

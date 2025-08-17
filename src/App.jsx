@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
+import { Link, Route, Router, Routes } from 'react-router'
+import UserPage from './Pages/UserPage'
+import Home from './Pages/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>Hello World</h1>
+
+      
+      <Routes>
+          <Route index element={<Home />}/>
+          <Route path='user/:id' element={<UserPage/>}/>
+      </Routes>
     </>
   )
 }
