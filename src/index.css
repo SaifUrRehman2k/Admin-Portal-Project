@@ -2,7 +2,9 @@ html {
     margin: 0;
     padding: 0;
 }
-
+body {
+    overflow-x: hidden;
+}
 
 * {
     box-sizing: border-box;
@@ -24,7 +26,7 @@ a {
 
 
 #mainContent {
-    width: 75%;
+    width: 75% !important;
     height: 50em;
     margin-left: auto;
 }
@@ -44,6 +46,20 @@ a {
 #users {
     width: 90%;
     margin: 0em auto;
+}
+.iconLink{
+    width: 2em !important;
+    height: 2em;
+    padding: 0em !important;
+    border-radius: 50%;
+    background-color: var(--bgColor3);
+}
+.iconLink:hover {
+    background-color: var(--bgColor2);
+}
+div.myAcc {
+    width: 10em;
+    justify-content: space-around;
 }
 .name, .username {
     width: 12%;

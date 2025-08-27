@@ -4,14 +4,6 @@ import { useParams } from 'react-router'
 
 const UserPage = () => {
     const params = useParams()
-    // const [userData, setUserData] = useState({})
-    // useEffect(() => {
-    //     fetch(`https://fakestoreapi.com/users/${params.id}`)
-    //         .then(res => res.json())
-    //         .then(data => setUserData(data))
-    //         .catch(console.log('an error occured'));
-    // }, [])
-    // console.log(userData);
     const data = localStorage.getItem('data')
     const usersData = JSON.parse(data)
     const userData = usersData[params.id]

@@ -3,12 +3,13 @@ import './App.css'
 import { Link, Route, Router, Routes } from 'react-router'
 import UserPage from './Pages/UserPage'
 import Home from './Pages/Home'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <Header logo='Dashboard'/>
 
       
       <Routes>
