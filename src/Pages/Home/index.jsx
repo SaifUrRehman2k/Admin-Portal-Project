@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { data, Link, useParams } from 'react-router'
+import Skeleton from '../../components/Skeleton'
 
 const Home = () => {
     const [userData, setUserData] = useState([])
+    const [loading, setLoading] = useState(true)
+    
     useEffect(() => {
         fetch(`https://fakestoreapi.com/users`)
             .then(res => res.json())
             .then(data => {
                 setUserData(data);
                 localStorage.setItem('data', JSON.stringify(data))
+                setLoading(false)
+            })
+            .catch(error => {
+                console.log(error);
+                setLoading(false)
             }
             )
     }, [])
@@ -50,7 +58,7 @@ const Home = () => {
                             Add users
                         </button>
                     </div>
-                    <div className='flex-row-wrap w-100 align-start justify-start gap-1'>
+                    <div className='flex-row-wrap usersGrid w-100 align-start justify-start gap-1'>
 
                         <div id='user' className='data flex-row-nowrap w-100 align-start justify-around'>
                             <h4 className='name'>Name</h4>
@@ -58,18 +66,19 @@ const Home = () => {
                             <h4 className='phone'>Phone</h4>
                             <h4 className='city'>City</h4>
                         </div>
-                        {
-                            userData.map((data, index) => (
-                                <Link to={`user/${data.id}`} id={`user${index}`} key={index} className='horizontalData flex-row-nowrap w-100 align-start justify-around'>
-                                    <p className='name'>{data.name.firstname}</p>
-                                    <p className='email'>{data.email}</p>
-                                    <p className='phone'>{data.phone}</p>
-                                    <p className='city'>{data.address.city}</p>
-                                </Link>
 
-                            ))
-                        }
+                            {   loading ?
+                                <Skeleton />
+                                : userData.map((data, index) => (
+                                    <Link to={`user/${data.id}`} id={`user${index}`} key={index} className='horizontalData flex-row-nowrap w-100 align-start justify-around'>
+                                        <p className='name'>{data?.name?.firstname}</p>
+                                        <p className='email'>{data?.email}</p>
+                                        <p className='phone'>{data?.phone}</p>
+                                        <p className='city'>{data?.address?.city}</p>
+                                    </Link>
 
+                                )) 
+                            }
 
 
                     </div>

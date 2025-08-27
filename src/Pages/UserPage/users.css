@@ -1,11 +1,11 @@
 .user-details-container {
   margin-left: auto;
-  width: 75%;
-  margin-left: auto;
-  background: #fff;
+  width: 40%;
+  margin: auto;
+  background: #dadadabe;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 10px rgba(123, 122, 122, 0.777), -3px -3px 10px  rgba(227, 227, 227, 0.963);
 }
 
 .user-details-container h2 {
