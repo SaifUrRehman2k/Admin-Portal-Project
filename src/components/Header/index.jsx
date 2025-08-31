@@ -12,24 +12,32 @@ const Header = (props) => {
   }
 
   return (
-    <div className='mainHeader'>
-      <header className='flex-row-wrap justify-between p-0-1 m-0 align-center'>
-        <h1 className="logo">{props.logo}</h1>
 
-        <div className='myAcc flex-row-nowrap align-center justify-center'>
+    <div>
+      {/* Create a header here  */}
 
-          <Link to={'/'} className="iconLink  flex-row-nowrap align-center justify-center ">
-            <img src={home} alt="" />
-          </Link>
-          <Link className='iconLink  flex-row-nowrap align-center justify-center '>
-            <img src={person} alt="" />
-          </Link>
-          <Link className="iconLink  flex-row-nowrap align-center justify-center ">
-            <img src={setting} alt="" />
-          </Link>
-        </div>
-      </header>
+      <div className='mainHeader'>
+        <header className='flex-row-wrap justify-between p-0-1 m-0 align-center'>
+          <h1 className="logo">{props.logo}</h1>
 
+          <div className='myAcc flex-row-nowrap align-center justify-center'>
+
+            <Link to={'/'} className="headerLink  flex-row-nowrap align-center justify-center ">
+              <img src={home} alt="" />
+            </Link>
+            <Link className='headerLink  flex-row-nowrap align-center justify-center '>
+              <img src={person} alt="" />
+            </Link>
+            {/* <Link className="iconLink  flex-row-nowrap align-center justify-center "> */}
+            <Link className="headerLink  flex-row-nowrap align-center justify-center ">
+
+              <img src={setting} alt="" />
+            </Link>
+          </div>
+        </header>
+
+
+      </div>
     </div>
   )
 }

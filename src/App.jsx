@@ -4,17 +4,45 @@ import { Link, Route, Router, Routes } from 'react-router'
 import UserPage from './Pages/UserPage'
 import Home from './Pages/Home'
 import Header from './components/Header'
+import Analyctics from './Pages/Analyctics'
+import DashBoard from './Pages/Dashboard'
+import Settings from './Pages/Settings'
+import Users from './Pages/Users'
 
 function App() {
+  const [userData, setUserData] = useState([])
+  const [loading, setLoading] = useState(true)
+  
 
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/users`)
+      .then(res => res.json())
+      .then(data => {
+        setUserData(data);
+        localStorage.setItem('data', JSON.stringify(data))
+        setLoading(false)
+      })
+      .catch(error => {
+        console.log(error);
+        setLoading(false)
+      }
+      )
+  }, [])
+  console.log(userData);
   return (
     <>
-      <Header logo='Dashboard'/>
+      <Header logo='Dashboard' />
 
-      
+
       <Routes>
-          <Route index element={<Home />}/>
-          <Route path='user/:id' element={<UserPage/>}/>
+        <Route path='' element={<Home />}>
+          <Route index element={<Users usersData={userData} loadingState={loading}/>} />
+          <Route path='/analyctics' element={<Analyctics />} />
+          <Route path='/dashboard' element={<DashBoard />} />
+          <Route path='/settings' element={<Settings />} />
+
+        </Route>
+        <Route path='user/:id' element={<UserPage />} />
       </Routes>
     </>
   )
