@@ -25,7 +25,7 @@ const Users = ({ usersData, loadingState }) => {
                 </ul>
             </div>
             <div id='users'>
-                <div className='flex-row-nowrap w-100 align-center justify-around'>
+                <div className='actionGrid flex-row-nowrap w-100 align-center justify-around'>
                     <h5>All orders</h5>
                     <input type="search" id='searchUsers' placeholder='Search users..' />
                     <p className='filter flex-row-nowrap align-center'>
