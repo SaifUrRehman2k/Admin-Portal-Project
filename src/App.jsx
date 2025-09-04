@@ -8,6 +8,7 @@ import Analyctics from './Pages/Analyctics'
 import DashBoard from './Pages/Dashboard'
 import Settings from './Pages/Settings'
 import Users from './Pages/Users'
+import Login from './Pages/Login'
 
 function App() {
   const [userData, setUserData] = useState([])
@@ -31,15 +32,14 @@ function App() {
   console.log(userData);
   return (
     <>
-      <Header logo='Dashboard' />
-
 
       <Routes>
-        <Route path='' element={<Home />}>
+        <Route index element={<Login/>} />
+        <Route path='home' element={<Home />}>
           <Route index element={<Users usersData={userData} loadingState={loading}/>} />
-          <Route path='/analyctics' element={<Analyctics />} />
-          <Route path='/dashboard' element={<DashBoard />} />
-          <Route path='/settings' element={<Settings />} />
+          <Route path='analyctics' element={<Analyctics />} />
+          <Route path='dashboard' element={<DashBoard />} />
+          <Route path='settings' element={<Settings />} />
 
         </Route>
         <Route path='user/:id' element={<UserPage />} />

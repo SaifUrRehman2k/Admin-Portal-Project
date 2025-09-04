@@ -7,7 +7,7 @@
     background-color: var(--bgColor3);
     border-top-left-radius: 1.5em;
     border-top-right-radius: 1.5em;
-    padding: 1em ;
+    padding: 1em;
 
     * {
         color: var(--white1);
@@ -59,7 +59,7 @@
         }
 
         svg {
-            fill: var(--bgColor3)  !important;
+            fill: var(--bgColor3) !important;
         }
     }
 }
@@ -67,10 +67,11 @@
 div.leftSideBarToggle {
     padding: 0.2em;
     position: absolute;
-    left: 13em;
-    top: 0em;
+    left: 18.3em;
+    top: 2em;
     background-color: var(--bgColor3);
     border-bottom-right-radius: 0.4em;
+    border-top-right-radius: 0.4em;
 
     svg.iconLink {
         padding: 0em;
@@ -85,6 +86,26 @@ div.leftSideBarToggle {
         width: 40% !important;
     }
 }
+
+@media (min-width: 800px) {
+    div.leftSideBarToggle {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .LeftSideBar {
+        width: 19.7em !important;
+        height: 100%;
+        position: absolute;
+        left: -19.7em;
+        top: 6em;
+    }
+    div.leftSideBarToggle {
+        left: 19.5em;
+    }
+}
+
 @media (max-width: 600px) {
     .LeftSideBar {
         width: 13em !important;

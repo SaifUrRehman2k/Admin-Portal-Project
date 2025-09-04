@@ -1,0 +1,62 @@
+.loginLine {
+  width: 60%;
+  padding: 1.5em 0em;
+  margin: 0em auto;
+  font-weight: 100;
+  font-size: x-large;
+}
+.loginSection {
+  width: 45%;
+  height: 98vh !important;
+  /* border: 1px solid rgba(138, 155, 248, 0.938); */
+  border-radius: 0.5em;
+}
+.loginBackground {
+  width: 55%;
+  height: 100vh;
+  background-image: url(../../assets/images/LoginBG.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.messageArea {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  height: 2em;
+}
+.forgetBtn {
+  font-size: 0.6em;
+  align-self: flex-end;
+}
+.btns {
+  width: 60%;
+  margin: 0em auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1em;
+}
+.inputs {
+  margin: 0em auto 2em auto;
+  width: 60%;
+  height: 12em;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.or {
+  color: var(--lightBlack);
+  margin: 3em 0em;
+}
+p{
+  color: black !important;
+}
+@media (max-width: 500px) {
+  .loginSection {
+    width: 80%;
+  }
+  .loginSection >* {
+      width: 80%;
+    }
+}

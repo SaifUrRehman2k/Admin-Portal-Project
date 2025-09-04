@@ -12,6 +12,75 @@
     animation: blink 800ms alternate 0s infinite forwards;
     transition: all 200ms linear;
 }
+button {
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    margin: 0em auto;
+}
+.holo {
+    border: 1px solid rgba(85, 106, 224, 0.938);
+    color: rgb(70, 70, 70) !important;
+    font-size: x-small;
+    padding: 1em 2em;
+    box-sizing: border-box;
+    width: 50%;
+}
+.holo:hover {
+    background-color: rgba(85, 106, 224, 0.938);
+    color: rgb(207, 207, 207) !important;
+    cursor: pointer;
+}
+.solid {
+    background-color: rgba(85, 106, 224, 0.938);
+}
+.solid:hover {
+    background-color: rgba(154, 169, 255, 0.486);
+    color: rgb(88, 88, 88) !important;
+    cursor: pointer;
+}
+.login {
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(85, 106, 224, 0.938);
+    padding: 1em 0em;
+    margin: 0em auto;
+    color: rgb(238, 236, 236);
+}
+.login:hover {
+    background-color: rgba(89, 109, 224, 0.671);
+    cursor: pointer;
+}
+input {
+    display: inline-block;    
+    padding: 0.5em 1em;
+    border: 1px solid rgba(163, 162, 162, 0.808);
+    border-radius: 0.2em;
+    color: black !important; 
+    width: 100%;
+
+}
+label {
+    color: rgb(83, 83, 83) !important;
+    font-size: 0.8em;
+}
+div.input {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 0.6em;
+}
+@media (max-width: 500px) {
+    label {
+        font-size: 0.5em !important;
+    }
+    input {
+        font-size: 0.7em;
+    }
+}
+
 
 @keyframes blink {
     0% {
@@ -41,5 +110,108 @@
 
     #mainContent {
         width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .home {
+        width: 100%;
+
+        #mainContent {
+            width: 100% !important;
+        }
+    }
+
+    #users {
+        margin: 0em 0.5em 0em 0.3em;
+        width: 100%;
+
+        .usersGrid {
+            width: 100%;
+
+            #user {
+                justify-content: space-between;
+
+                h4 {
+                    padding: 0em 0.4em;
+                }
+
+                h4.name {
+                    width: 15%;
+                }
+
+                h4.email,
+                h4.phone {
+                    width: 30%;
+                }
+
+                h4.city {
+                    width: 20%;
+                }
+            }
+        }
+
+        .usersGrid .horizontalData {
+            height: 3em;
+            border-bottom: 1px solid var(--fontColor2);
+            p {
+                padding: 0.5em;
+                margin: 0%;
+            }
+
+            p.name {
+                width: 15%;
+            }
+
+            p.email,
+            p.phone {
+                width: 30%;
+            }
+
+            p.city {
+                width: 20%;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .actionGrid {
+        flex-flow: row wrap;
+        height: 8em;
+        align-items: center;
+
+        #searchUsers {
+            width: 100%;
+            padding: 1em;
+            order: 1 !important;
+        }
+
+        button {
+            order: 4 !important;
+        }
+
+        h5 {
+            order: 2 !important;
+        }
+
+        p {
+            order: 3 !important;
+            width: 15%;
+        }
+
+    }
+}
+@media (max-width: 500px) {
+    #users {
+        width: 35em;
+
+    }
+    .actionGrid {
+        width: 98vw;
+    }
+    .usersGrid {
+        overflow-x: auto !important;
     }
 }

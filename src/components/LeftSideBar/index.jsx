@@ -9,7 +9,7 @@ const LeftSideBar = () => {
     };
     return (
         <>
-            <div className={`LeftSideBar w-25 flex-col-wrap align-start justify-start gap-3 m-0-1 ${showSidebar ? 'left-0' : ''}`}>
+            <div className={`LeftSideBar w-25 flex-col-wrap align-start justify-start gap-3 m-0-1  ${showSidebar ? 'left-0' : ''}`}>
                 <div className='leftSideBarToggle flex-row-nowrap align-center justify-center '>
                     <svg className='menu iconLink' onClick={handleClick} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c9c9c9ff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
                 </div>
